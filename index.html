@@ -197,7 +197,7 @@
 
   .videos{
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
     gap:22px;
     padding:36px 0 70px;
   }
@@ -551,6 +551,9 @@
           </div>
           <div class="media">
             <iframe src="https://www.youtube.com/embed/JL93at_73CI" title="Fridays Past Plugged In" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="media" style="margin-top:14px;">
+            <iframe src="https://www.youtube.com/embed/Yn8UqU8VVr0" title="Fridays Past Plugged In" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <p class="desc">Highlights from our full band performances.</p>
           <a href="#" class="card-btn">More Plugged In Videos</a>
