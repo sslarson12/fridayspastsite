@@ -87,18 +87,15 @@
     color:var(--blue-bright);
     border-bottom-color:var(--blue-bright);
   }
-  .nav-mark{
-    font-family:'Oswald', sans-serif;
-    font-weight:600;
-    letter-spacing:0.08em;
-    font-size:15px;
-    color:var(--ink-dim);
+  .nav-logo{
+    height:34px;
+    width:auto;
   }
 
   @media (max-width: 720px){
     .nav-links{ gap:18px; font-size:12px; }
     .nav-inner{ padding:16px 20px; flex-wrap:wrap; justify-content:center; gap:12px; }
-    .nav-mark{ display:none; }
+    .nav-logo{ display:none; }
   }
 
   /* ---------- HERO ---------- */
@@ -120,19 +117,6 @@
     z-index:2;
   }
 
-  /* Logo badge */
-  .badge-wrap{
-    display:flex;
-    justify-content:center;
-    padding-top:56px;
-    padding-bottom:8px;
-  }
-  .badge-logo{
-    width:min(560px, 88vw);
-    height:auto;
-    filter:drop-shadow(0 12px 30px rgba(0,0,0,0.55));
-  }
-
   .hero-body{
     padding:28px 0 70px;
     display:flex;
@@ -143,11 +127,11 @@
   }
   .tagline{
     font-family:'Oswald', sans-serif;
-    font-weight:600;
-    font-size:clamp(26px, 4.4vw, 44px);
-    line-height:1.12;
+    font-weight:500;
+    font-size:clamp(20px, 3vw, 30px);
+    line-height:1.22;
     letter-spacing:0.01em;
-    text-shadow:0 2px 12px rgba(0,0,0,0.65);
+    text-shadow:0 2px 10px rgba(0,0,0,0.55);
   }
   .tagline .dim{ color:var(--ink-dim); }
 
@@ -365,6 +349,63 @@
     text-shadow:0 1px 4px rgba(0,0,0,0.6);
   }
 
+  /* ---------- SHOWS ---------- */
+  .shows-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    padding:36px 0 70px;
+    max-width:640px;
+    margin:0 auto;
+  }
+  .show-row{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    background:var(--bg-raised);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:20px 24px;
+  }
+  .show-date{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-width:74px;
+    padding:8px 4px;
+    border-right:1px solid var(--line);
+  }
+  .show-day{
+    font-family:'Oswald', sans-serif;
+    font-size:11px;
+    letter-spacing:0.14em;
+    color:var(--blue-bright);
+    text-transform:uppercase;
+  }
+  .show-num{
+    font-family:'Oswald', sans-serif;
+    font-weight:600;
+    font-size:18px;
+    letter-spacing:0.02em;
+    margin-top:2px;
+  }
+  .show-info h3{
+    font-family:'Oswald', sans-serif;
+    font-weight:600;
+    font-size:18px;
+    letter-spacing:0.01em;
+  }
+  .show-info p{
+    font-size:14px;
+    color:var(--ink-dim);
+    margin-top:4px;
+  }
+  @media (max-width: 560px){
+    .show-row{ padding:16px; gap:16px; }
+    .show-date{ min-width:58px; }
+  }
+
   /* ---------- FOOTER ---------- */
   footer{
     border-top:1px solid var(--line);
@@ -457,7 +498,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#shows">Shows</a></li>
     </ul>
-    <span class="nav-mark">Fridays ▷ Past</span>
+    <img class="nav-logo" src="logo.png" alt="Fridays Past">
     <ul class="nav-links">
       <li><a href="#music">Music</a></li>
       <li><a href="#photos">Photos</a></li>
@@ -468,10 +509,6 @@
 
 <header class="hero" id="home">
   <div class="hero-content wrap">
-    <div class="badge-wrap">
-      <img class="badge-logo" src="logo.png" alt="Fridays Past">
-    </div>
-
     <div class="hero-body">
       <p class="tagline">
         Songs you know.<br>
@@ -532,6 +569,38 @@
           <a href="https://open.spotify.com/artist/05uPB9kXW1nc8o2s7mZHIC" class="card-btn" target="_blank" rel="noopener">Hear It First</a>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <section id="shows">
+    <div class="section-head">
+      <h2>Next Shows</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="wrap">
+      <div class="shows-list">
+        <div class="show-row">
+          <div class="show-date">
+            <span class="show-day">Sat</span>
+            <span class="show-num">Sept 12</span>
+          </div>
+          <div class="show-info">
+            <h3>14 Cannons</h3>
+            <p>Westlake Village &middot; 6:30–9:30pm &middot; Full Band</p>
+          </div>
+        </div>
+        <div class="show-row">
+          <div class="show-date">
+            <span class="show-day">Sat</span>
+            <span class="show-num">Sept 19</span>
+          </div>
+          <div class="show-info">
+            <h3>The Craftsman</h3>
+            <p>Redondo Beach &middot; 7–10pm &middot; Full Band</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
